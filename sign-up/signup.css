@@ -1,0 +1,64 @@
+.new {
+    width: 500px;
+    margin: auto;
+    padding: 13% 0 0;
+    height: 50vh;
+    text-align: center;
+  }
+  .form {
+    position: relative;
+    z-index: 1;
+    background: white;
+    padding: 40px;
+    max-width: 390px;
+    margin: 0 auto 100px;
+    text-align: center;
+    box-shadow: 0px 1px 7px 5px rgba(0, 0, 0, 0.2);
+    
+  }
+  .form input {
+    margin: 0 0 15px;
+    width: 100%;
+    outline: 0;
+    padding: 15px;
+    border: 0;
+    font-size: 15px;
+    box-sizing: border-box;
+    background: hsl(0, 0%, 95%);
+    font-family: "Krona One";
+    box-shadow: 0px 1px 7px 5px rgba(0, 0, 0, 0.2);
+  }
+  .form button {
+    position: relative;
+    width: 20%;
+    top: 10px;
+    left: 114px;
+    text-align: center;
+    padding: 15px;
+    border: none;
+    background: white;
+    margin-bottom: 5px;
+    color: rgb(65, 34, 34);
+    cursor: pointer;
+    outline: 0;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2%;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);
+
+   }
+   .form button:hover{
+    background-color: blue;
+    color: white;
+    box-shadow: 0 0 2px 2px rgb(0,0,0);
+    text-decoration: none;
+   }
+    .new-account{
+        text-align: left;
+        border: 3px solid blue;
+    }
+    .btn-3{
+  margin-right: 8px;
+    }
