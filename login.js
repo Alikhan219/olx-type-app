@@ -26,8 +26,11 @@ var firebaseConfig = {
    const email= emailTxt.value;
    const pass= passTxt.value;
    const auth= firebase.auth();
-   
+         
  const promise= auth.signInWithEmailAndPassword(email, pass)
+   emailTxt.value="";
+  passTxt.value="";
+
      promise.catch((e) => console.log(e.message));
      promise.then(()=>{
        console.log
