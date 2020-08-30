@@ -60,6 +60,7 @@
  }
  #login{
    border-radius: 7%;
+   
    width: 20%;
    box-sizing: border-box;
    padding: 10px;
@@ -81,7 +82,7 @@
    
  }
  #log{
-   width: 10%;
+   padding: 10%;
    box-sizing: border-box;
    padding: 10px;
    font-size: 17px;
@@ -108,7 +109,26 @@
  .header{
  
  width: 100%;
- padding: 0.5%;
- 
+ height: 8vh;
+ background: white;
+ box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);
+ position: fixed;
+ z-index: 1;
  
  }
+@media screen and (max-width:400px){
+  .clos{
+    width: 100%;
+  }
+  #login{
+    width: 100%;
+  }
+ #signup{
+   width: 100%;
+ }
+
+
+
+
+
+}

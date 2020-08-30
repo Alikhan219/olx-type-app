@@ -16,8 +16,32 @@ var firebaseConfig = {
 
 
 
-  const emailtxt= document.querySelector('.email');
+  const emailTxt= document.querySelector('.email');
   const passTxt=  document.querySelector('.password');
   const logInBtn=  document.querySelector('.login');
-  const signOutBtn= document.querySelector('.');
+  
+
+
+  logInBtn.addEventListener('click', e=>{
+   const email= emailTxt.value;
+   const pass= passTxt.value;
+   const auth= firebase.auth();
+   
+ const promise= auth.signInWithEmailAndPassword(email, pass)
+     promise.catch((e) => console.log(e.message));
+     promise.then(()=>{
+       console.log
+       ('you are logged in');
+     })
+  })
+
+firebase.auth().onAuthStateChanged((firebaseUser)=>{
+  if(firebaseUser){
+    console.log(firebaseUser)
+  }else{
+    console
+    .log('you are not logged in')
+  }
+})
+  
  
