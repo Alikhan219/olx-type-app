@@ -11,3 +11,13 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.auth();
+
+
+
+
+
+  const emailtxt= document.querySelector('.email');
+  const passTxt=  document.querySelector('.password');
+  const logInBtn=  document.querySelector('.login');
+  const signOutBtn= document.querySelector('.');
+ 
