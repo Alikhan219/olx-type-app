@@ -1,134 +1,122 @@
-.modal-body input{
-    width: 100%;
-    border: 0;
-    outline: 0;
-    background-color: hsl(0,0%,95%);
-    padding: 10px;
-    margin: 0 0 15px;
-    box-sizing: border-box;
-    box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);
- }
- 
- 
-
- 
- .clos{
-   background-color: black;
-   color: white;
-   transition: all 0.3s ease;
-   width: 20%;
-   box-sizing: border-box;
-   padding: 10px;
-   font-size: 17px;
-   cursor: pointer;
-   font-weight: 600;
-   border: 0;
-   outline: 0;
-   border-radius: 7%;
-   transition: all 0.5s ease;
-   box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);
- }
- .clos:hover{
- 
-   box-shadow: 0 0 2px 2px rgb(0,0,0);
-   background: black;
- }
- 
- 
- #signup{
-   width: 20%;
-   box-sizing: border-box;
-   padding: 10px;
-   font-size: 17px;
-   cursor: pointer;
-   border: 0;
-   outline: 0;
-   color: rgb(65, 34, 34);
-   text-decoration: none;
-   font-weight: 600;
-   transition: all 0.5s ease;
-   text-align: center;
-   border-radius: 7%;
-   box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);}
-   
- 
-   #signup:hover{
-     background-color: blue;
-     color: white;
-     box-shadow: 0 0 2px 2px rgb(0,0,0);
-     text-decoration: none;
- }
- #login{
-   border-radius: 7%;
-   
-   width: 20%;
-   box-sizing: border-box;
-   padding: 10px;
-   font-size: 17px;
-   cursor: pointer;
-   border: 0;
-   outline: 0;
-   color: rgb(65, 34, 34);
-   font-weight: 600;
-   transition: all 0.5s ease;
-   box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);
-   background: white;
- 
- }
- #login:hover{
-   background-color: blue;
-   color: white;
-   box-shadow: 0 0 2px 2px rgb(0,0,0);
-   
- }
- #log{
-   padding: 10%;
-   box-sizing: border-box;
-   padding: 10px;
-   font-size: 17px;
-   cursor: pointer;
-   border: 2px solid blue;
-   outline: 0;
-   color: rgb(65, 34, 34);
-   font-weight: 600;
-   transition: all 0.5s ease;
-   box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);
-   margin: 10px 0 0 90%;
-  border-radius: 7%;
- 
- 
- }
- 
- #log:hover{
- 
-   background-color: blue;
-   color: white;
-   box-shadow: 0 0 2px 2px rgb(0,0,0);
- }
- 
- .header{
- 
- width: 100%;
- height: 8vh;
- background: white;
- box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);
- position: fixed;
- z-index: 1;
- 
- }
-@media screen and (max-width:400px){
-  .clos{
-    width: 100%;
-  }
-  #login{
-    width: 100%;
-  }
- #signup{
-   width: 100%;
- }
+.modal-body input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: hsl(0, 0%, 95%);
+  padding: 10px;
+  margin: 0 0 15px;
+  box-sizing: border-box;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
 }
-@media screen and (max-width:750px){
-  #log{
+
+.clos {
+  background-color: black;
+  color: white;
+  transition: all 0.3s ease;
+  width: 20%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: 600;
+  border: 0;
+  outline: 0;
+  border-radius: 7%;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.clos:hover {
+  box-shadow: 0 0 2px 2px rgb(0, 0, 0);
+  background: black;
+}
+
+#signup {
+  width: 20%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  color: rgb(65, 34, 34);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.5s ease;
+  text-align: center;
+  border-radius: 7%;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#signup:hover {
+  background-color: blue;
+  color: white;
+  box-shadow: 0 0 2px 2px rgb(0, 0, 0);
+  text-decoration: none;
+}
+#login {
+  border-radius: 7%;
+
+  width: 20%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  color: rgb(65, 34, 34);
+  font-weight: 600;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  background: white;
+}
+#login:hover {
+  background-color: blue;
+  color: white;
+  box-shadow: 0 0 2px 2px rgb(0, 0, 0);
+}
+#log {
+  padding: 10%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  border: 2px solid blue;
+  outline: 0;
+  color: rgb(65, 34, 34);
+  font-weight: 600;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  margin: 10px 0 0 90%;
+  border-radius: 7%;
+}
+
+#log:hover {
+  background-color: blue;
+  color: white;
+  box-shadow: 0 0 2px 2px rgb(0, 0, 0);
+}
+
+.header {
+  width: 100%;
+  height: 8vh;
+  background: white;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 1;
+}
+@media screen and (max-width: 400px) {
+  .clos {
+    width: 100%;
+  }
+  #login {
+    width: 100%;
+  }
+  #signup {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 750px) {
+  #log {
     margin: 10px 0 0 80%;
-   }
+  }
 }
