@@ -77,6 +77,19 @@ function loadHandler() {
   }
   if (loginItem) {
     window.location.href = herfArr[0];
-    localStorage.removeItem(login);
+    localStorage.removeItem("login");
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
