@@ -36,19 +36,26 @@ logInBtn.addEventListener("click", (e) => {
     console.log(e.message)
   );
   promise.then((response) => {
+    
     const user = response.user.uid;
     var docRef = firestore.doc(`Users/${user}`);
   
     docRef.get().then(function (docRef) {
         if (docRef && docRef.exists) {
+        
           const string = docRef.data();
           string.id = user;
           const stringify = JSON.stringify(string);
           console.log(stringify);
           
           localStorage.setItem("Userdata", stringify);
+          
           window.location.href = "./User-profile/profile.html";
+         
           alert("you are logged in");
+          document.querySelector('#comment').classList.remove('hide');
+    document.querySelector('#bell').classList.remove('hide');
+          
         }
       
       })
@@ -59,6 +66,15 @@ logInBtn.addEventListener("click", (e) => {
       
   });
 });
+
+document.querySelector('#logout').addEventListener('click', e=>{
+
+firebase.auth().signOut();
+
+})
+
+
+
 
 firebase.auth().onAuthStateChanged((firebaseUser) => {
   if (firebaseUser) {
@@ -74,10 +90,16 @@ function loadHandler() {
   if (herfArr.length > 1) {
     localStorage.setItem("login", 1);
     document.getElementById("log").click();
+   
   }
   if (loginItem) {
     window.location.href = herfArr[0];
     localStorage.removeItem("login");
+  }
+  const usserr= localStorage.getItem('Userdata')
+  if(usserr){
+    document.querySelector('#comment').classList.remove('hide');
+    document.querySelector('#bell').classList.remove('hide');
   }
 }
 

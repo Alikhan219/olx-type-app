@@ -74,6 +74,30 @@
   color: white;
   box-shadow: 0 0 2px 2px rgb(0, 0, 0);
 }
+#logout{
+  border-radius: 7%;
+
+  width: 20%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  color: rgb(65, 34, 34);
+  font-weight: 600;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  background: white;
+}
+#logout:hover{
+
+  background-color: blue;
+  color: white;
+  box-shadow: 0 0 2px 2px rgb(0, 0, 0);
+
+
+}
 #log {
   
   box-sizing: border-box;
@@ -87,6 +111,8 @@
   transition: all 0.5s ease;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
   border-radius: 7%;
+  margin-left: 34px;
+
 }
 
 #log:hover {
@@ -98,13 +124,24 @@
 .header {
   width: 100%;
   height: 8vh;
-  background: white;
+  background: #fff;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+}
+@media screen and (max-height:1100px){
+
+  .header{
+
+    margin: 0 auto;
+    height: 68px;
+
+
+  }
+
 }
 @media screen and (max-width: 400px) {
   .clos {
@@ -123,28 +160,114 @@
   }
 }
 
-#location{
-  padding: 10px;
-  
-}
+
 .search{
 
-
+  outline: deepskyblue;
   display: flex;
   flex-direction: row;
-border: 2px solid rgb(29, 29, 117);
+border: 2px solid blue;
 
 
 }
 #search{
   border: 0;
   outline: 0;
-  width: 22rem;
+  width: 35rem;
   border-right: 2px solid blue;
+  
   }
   
   .mysearch{
     cursor: pointer;
     font-size: 2rem;
     background: blue;
+    color: white;
   }
+  .fa-comment{
+   margin-left: 34px;
+   font-size: 2rem;
+   
+   transition: all 0.5s ease;
+ 
+  }
+  .fa-comment:hover{
+
+    border-radius: 10%;
+    background: chartreuse;
+    cursor: pointer;
+ 
+  }
+
+  .fa-bell{
+
+    margin-left: 34px;
+    font-size: 2rem;
+   
+    transition: all 0.5s ease;
+    
+  }
+  .fa-bell:hover{
+ 
+    
+    border-radius: 10%;
+    background: chartreuse;
+    cursor: pointer;
+ 
+  }
+
+  .fa-plus{
+    font-size: 19px;
+    margin-top: 5px;
+  }
+  .hide{
+    display: none;
+   
+  }
+  .sell{
+    border: 4px solid green;
+    margin-left: 34px;
+    padding: 8px;
+    display: flex;
+    cursor: pointer;
+    margin-top: 8.5px;
+    
+  
+  }
+  .sell span{
+    
+    font-size: 23px;
+
+  }
+
+#location{
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+
+}
+.loc{
+  margin-right: 18px;
+border: 2px solid blue;
+background: white;
+}
+.olX{
+  margin-right: 18px;
+  font-family: 'Bevan', cursive;
+  margin-top: 9px;
+}
+@media screen and (min-width:720px){
+
+ .loc{
+ 
+   display: flex;
+  
+   align-items: center;
+  margin-right: 18px;
+  border: 2px solid blue;
+  font-size: 1.5rem;
+ }
+
+}
+
+

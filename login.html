@@ -27,12 +27,16 @@
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
     <!-- end of firebase sicript -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bevan&display=swap');
+      </style>
   </head>
   <body onload="loadHandler()">
     <!-- Button trigger modal -->
     <div class="header">
       <h2 class="olX">OLX</h2>
-
+<div class="loc"> 
+  <i class="fas fa-search "></i>
       <select name="location" id="location">
         <option disabled selected value>Select a Location</option>
         <p>Popular Locations</p>
@@ -41,12 +45,13 @@
         <option value="punjab">Sindh</option>
         <option value="punjab">Khyber Pakhtunkhwa</option>
       </select>
+    </div>
       <div class="search">
-      <input type="search"  id="search" /><i class="fad fa-search mysearch"></i></div>
-      <svg width="104" height="48" viewBox="0 0 6 8"></svg>
-      <i class="far fa-comment"></i>
-      <i class="far fa-bell"></i>
-      <h2 <i class="fas fa-plus"></i>SEll</h2>
+      <input type="search"  id="search" placeholder="Find Cars,Mobile Phones and more..."/><i class="fas fa-search mysearch"></i></div>
+     
+      <i class="far fa-comment hide" id="comment"></i>
+      <i class="far fa-bell hide" id="bell"></i>
+      
       <button
         type="button"
         id="log"
@@ -56,6 +61,7 @@
       >
         Login
       </button>
+      <h2 class="sell"> <i class="fas fa-plus"></i><span>SEll</span></h2>
     </div>
     <!-- Modal -->
     <div
@@ -90,8 +96,8 @@
               Close
             </button>
 
-            <button class="login" id="login">Login</button>
-
+            
+        
             <a
               href="./sign-up/signup.html"
               target="_blank"
@@ -99,11 +105,16 @@
               class="signup"
               >Signup</a
             >
+            <button class="login" id="login">Login</button>
+            <button id="logout" class="hide">LogOut</button>
           </div>
+          
         </div>
+        
       </div>
+      
     </div>
-
+    
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
