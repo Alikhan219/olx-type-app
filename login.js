@@ -35,52 +35,50 @@ logInBtn.addEventListener("click", (e) => {
       ),
     console.log(e.message)
   );
-  promise.then((response) => {
-    
+  promise.then(async (response) => {
     const user = response.user.uid;
     var docRef = firestore.doc(`Users/${user}`);
-  
-    docRef.get().then(function (docRef) {
+    docRef
+      .get()
+      .then(async function (docRef) {
         if (docRef && docRef.exists) {
-        
           const string = docRef.data();
           string.id = user;
+          const snapshot = await firebase.firestore().collection(`Users/${user}/ads`).get()
+          const ads = snapshot.docs.map(doc => doc.data());
+          string.ads = ads;
           const stringify = JSON.stringify(string);
           console.log(stringify);
-          
+
           localStorage.setItem("Userdata", stringify);
-          
+
           window.location.href = "./User-profile/profile.html";
-         
-          alert("you are logged in");
-          document.querySelector('#comment').classList.remove('hide');
-    document.querySelector('#bell').classList.remove('hide');
-          
+
+          document.querySelector("#comment").classList.remove("hide");
+          document.querySelector("#bell").classList.remove("hide");
         }
-      
       })
       .catch(function (error) {
         console.log("got an error", error);
       });
-      
-      
   });
 });
 
-document.querySelector('#logout').addEventListener('click', e=>{
-
-firebase.auth().signOut();
-
-})
-
-
-
+document.querySelector("#logout").addEventListener("click", (e) => {
+  firebase.auth().signOut();
+});
 
 firebase.auth().onAuthStateChanged((firebaseUser) => {
   if (firebaseUser) {
     console.log(firebaseUser);
+    document.querySelector("#logout").classList.remove("hide");
+    document.querySelector("#log").classList.add("hide");
   } else {
     console.log("you are not logged in");
+    document.querySelector("#logout").classList.add("hide");
+    document.querySelector("#log").classList.remove("hide");
+    document.querySelector("#comment").classList.add("hide");
+    document.querySelector("#bell").classList.add("hide");
   }
 });
 
@@ -90,28 +88,14 @@ function loadHandler() {
   if (herfArr.length > 1) {
     localStorage.setItem("login", 1);
     document.getElementById("log").click();
-   
   }
   if (loginItem) {
     window.location.href = herfArr[0];
     localStorage.removeItem("login");
   }
-  const usserr= localStorage.getItem('Userdata')
-  if(usserr){
-    document.querySelector('#comment').classList.remove('hide');
-    document.querySelector('#bell').classList.remove('hide');
+  const usserr = localStorage.getItem("Userdata");
+  if (usserr) {
+    document.querySelector("#comment").classList.remove("hide");
+    document.querySelector("#bell").classList.remove("hide");
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
