@@ -70,7 +70,7 @@ postBtn.addEventListener('click', e => {
     price: pric,
 
   }).then(() => {
-    return firestore.doc(`Users/${currentUserid}/ads/${adId}`).set({ adId, category: cat, Title: titl });
+    return firestore.doc(`Users/${currentUserid}/ads/${adId}`).set({ adId, category: cat, Title: titl, description: des, location: loc, price: pric });
   }).then((res) => {
     alert("Ad Posted Successfully");
     console.log(res)
@@ -86,10 +86,10 @@ postBtn.addEventListener('click', e => {
 
 
 
-function showAdd({Title, adId, category}) {
+function showAdd({Title, adId, category, description, location, price}) {
   const adContainer = document.createElement('div');
   adContainer.classList.add('add-1')
-  const h3_1 = document.createElement('H3');
+  const h3_1 = document.createElement('h3');
   h3_1.innerText = "Category";
   const h4_1 = document.createElement('h4')
   h4_1.innerText = category
@@ -97,16 +97,32 @@ function showAdd({Title, adId, category}) {
   h3_2.innerText = "Title";
   const h4_2 = document.createElement('h4');
   h4_2.innerText = Title;
-
-  // adDetailBtn.innerText("Veiw details");
-
-  adContainer.append(h3_1)
-  adContainer.appendChild(h4_1)
-  adContainer.appendChild(h3_2)
-  adContainer.appendChild(h4_2)
-
-  console.log(adContainer)
-  const mainDiv= document.querySelector('.mainDiv')
+  const h3_3 = document.createElement('h3');
+  h3_3.innerHTML= "Description";
+  const h4_3 = document.createElement('h4');
+  h4_3.innerHTML= description;
+  const h3_4 = document.createElement('h3');
+  h3_4.innerHTML= "Location";
+  const h4_4 = document.createElement('h4');
+  h4_4.innerHTML= location;
+const h3_5 = document.createElement('h3');
+h3_5.innerHTML = "Price";
+const h4_5 = document.createElement('h4');
+h4_5.innerHTML = price;
+const viewDetailDiv = document.createElement('div');
+viewDetailDiv.appendChild(h3_3)
+viewDetailDiv.appendChild(h4_3)
+viewDetailDiv.appendChild(h3_4)
+viewDetailDiv.appendChild(h4_4)
+viewDetailDiv.appendChild(h3_5)
+viewDetailDiv.appendChild(h4_5)
+  adContainer.append(h3_1);
+  adContainer.appendChild(h4_1);
+  adContainer.appendChild(h3_2);
+  adContainer.appendChild(h4_2);      
+  adContainer.appendChild(viewDetailDiv);
+  console.log(adContainer);
+  const mainDiv= document.querySelector('.mainDiv');
   mainDiv.appendChild(adContainer);
 }
 

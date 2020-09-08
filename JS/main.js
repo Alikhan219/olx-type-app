@@ -52,7 +52,7 @@ logInBtn.addEventListener("click", (e) => {
 
           localStorage.setItem("Userdata", stringify);
 
-          window.location.href = "../userProfile.html";
+          window.location.href = "./userProfile.html";
 
           document.querySelector("#comment").classList.remove("hide");
           document.querySelector("#bell").classList.remove("hide");
